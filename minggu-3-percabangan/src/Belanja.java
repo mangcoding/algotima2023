@@ -1,13 +1,13 @@
 public class Belanja {
     public static void main(String[] args) throws Exception {
-        int discount = 0;
-        int belanja = 150000;
+        Double discount = (double) 0;
+        Double belanja = (double) 150000;
 
         if (belanja > 100000) {
-            discount = 10*belanja/100;
+            discount = (double) 10/100 * belanja;
         }
 
-        int totalbayar = belanja-discount;
+        Double totalbayar = belanja-discount;
         System.out.println("Total bayar: "+totalbayar);
     }
 }
