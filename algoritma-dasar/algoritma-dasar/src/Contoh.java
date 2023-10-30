@@ -16,6 +16,11 @@ public class Contoh {
     public static void main(String[] args) throws Exception {
         ArrayList<Siswa> tekhnik = new ArrayList<Siswa>();
         int menu =1;
+        int indeksA=0;
+        int indeksB=0;
+        int indeksC=0;
+        int indeksD=0;
+        int indeksE=0;
 
         do {
             BufferedReader inputan = new BufferedReader(new InputStreamReader(System.in)); 
@@ -31,8 +36,25 @@ public class Contoh {
             if (menu == 2) {
                 for (Siswa mhs:tekhnik) {
                     String indeks = Contoh.convertToIndeks(mhs.nilai);
+                    if (indeks == "A")
+                        indeksA++;
+                    else if (indeks == "B")
+                        indeksB++;
+                    else if (indeks == "C")
+                        indeksC++;
+                    else if (indeks == "D")
+                        indeksD++;
+                    else 
+                        indeksE++;
+
                     System.out.println(mhs.name+" : "+mhs.nilai+" "+indeks);
                 }
+
+                System.out.println("Indeks A "+indeksA);
+                System.out.println("Indeks B "+indeksB);
+                System.out.println("Indeks C "+indeksC);
+                System.out.println("Indeks D "+indeksD);
+                System.out.println("Indeks E "+indeksE);
             }
 
         }while(menu !=3);
